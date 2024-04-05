@@ -1,0 +1,122 @@
+/* *######### General Styles ##########*/
+*{
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-family: "Outfit", sans-serif;
+}
+img {
+    display: block;
+    width:100px;
+}
+/* ~#########      Start   reload page    ##########*/
+#reload::before {
+    content: "";
+    position: absolute;
+    background-color: white;
+    opacity: 0.8;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 100%;
+    z-index: 1;
+    animation: trans-bottom 0.5s alternate ease-in;
+}
+#reload::after {
+    content: "";
+    position: absolute;
+    background-color: white;
+    opacity: 0.8;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    animation: trans-top 0.5s alternate ease-out;
+}
+@keyframes trans-top {
+    0% {
+        top: 50%;
+    }
+    100% {
+        top: 100%;
+    }
+}
+@keyframes trans-bottom {
+    0% {
+        bottom: 50%;
+    }
+    100% {
+        bottom: 100%;
+    }
+}
+/**################# home ################# */
+body{
+    background-image: url(wet.jpg);
+    background-position: center;
+    background-size: cover;
+    z-index: -1;
+    background-color: rgba(0, 0, 0, 1);
+}
+.search {
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.container .heading .alert-name {
+    color: red;
+    margin-top: -18px;
+    padding-bottom: 10px;
+    letter-spacing: 0.0425rem;
+    font-weight: 200;
+  }
+  .container .form-control:focus {
+    box-shadow: 0 0 0 0.25rem rgba(63, 156, 91, 0.25) !important;
+    border-color: #86fe86;
+  }
+  .container th {
+    font-size: 14px;
+  }
+  .container .is-invalid:focus {
+    box-shadow: 0 0 0 0.25rem rgba(241, 0, 0, 0.25) !important;
+    border-color: #ff0000;
+  }
+  .container .tabll span{
+    background-color: yellow;
+    font-weight: 800;
+    color: black;
+  }
+  .alert-box {
+    border-radius: 10px;
+    background-color: #d9d7d8;
+    height: 250px;
+    width: 380px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .table>:not(:last-child)>:last-child>* {
+    color: black;
+  }
+
+  .search label{
+    background-image: linear-gradient(to right, #61db80, white);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .table>:not(caption)>*>* {
+    padding: .5rem .5rem;
+    color: black;
+    background-color: var(--bs-table-bg);
+    border-bottom-width: 1px;
+    box-shadow: inset 0 0 0 9999px var(--bs-table-accent-bg);
+  }
+  a {
+     color: white;
+         text-decoration: none;
+  }
